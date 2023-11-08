@@ -16,6 +16,7 @@ node
   stage("CheckOutCodeGit")
   {
    git 'https://github.com/Sivay3005/maven-web-application-obsqura.git'
+   sh "ls"
  }
  
  stage("Build")
