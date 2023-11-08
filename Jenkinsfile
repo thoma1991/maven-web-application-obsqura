@@ -35,7 +35,8 @@ node
  
  stage("UploadArtifactsintoNexus")
  {
- sh "${mavenHome}/bin/mvn deploy"
+ sh "ls"
+ sh "${mavenHome}/bin/mvn -s settings.xml deploy"
  }
  
  //  stage("DeployAppTomcat")
