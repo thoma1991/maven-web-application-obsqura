@@ -27,7 +27,7 @@ node
   
  stage("ExecuteSonarQubeReport")
  {
- sh "sh "${mvn}/bin/mvn clean package sonar:sonar -Dsonar.projectKey=maven-web-application-obsqura""
+ sh "${mavenHome}/bin/mvn clean package sonar:sonar -Dsonar.projectKey=maven-web-application-obsqura""
  }
  
  // stage("UploadArtifactsintoNexus")
