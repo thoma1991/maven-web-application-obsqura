@@ -25,13 +25,13 @@ node
  }
  
   
- // stage("ExecuteSonarQubeReport")
- // {
- // sh "${mavenHome}/bin/mvn clean package sonar:sonar \
- //  -Dsonar.projectKey=maven-web-application-obsqura \
- //  -Dsonar.host.url=http://18.204.10.15:9000 \
- //  -Dsonar.login=sqp_f06414594231f0e78dd3783544e85c9762b5afea"
- // }
+ stage("SonarQube")
+ {
+ sh "${mavenHome}/bin/mvn clean sonar:sonar \
+  -Dsonar.projectKey=maven-web-application-obsqura \
+  -Dsonar.host.url=http://18.204.10.15:9000 \
+  -Dsonar.login=sqp_f06414594231f0e78dd3783544e85c9762b5afea"
+ }
  
  // stage("UploadArtifactsintoNexus")
  // {
